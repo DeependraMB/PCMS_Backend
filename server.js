@@ -28,7 +28,9 @@ const io = new Server(server, {
 
 initializeSocket(server);
 
-
+router.get("/", (req, res) => {
+  res.status(200).json({ status: "success", message: "Server is running" });
+});
 const loginRoutes = require("../server/Routes/loginRoutes");
 const studentRoutes = require("./Routes/studentRoutes");
 const teacherRoutes = require("./Routes/teacherRoutes");
