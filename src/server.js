@@ -29,12 +29,12 @@ const io = new Server(server, {
 initializeSocket(server);
 
 
-const loginRoutes = require("../server/Routes/loginRoutes");
+const loginRoutes = require("./Routes/loginRoutes");
 const studentRoutes = require("./Routes/studentRoutes");
 const teacherRoutes = require("./Routes/teacherRoutes");
 const alumniRoutes = require("./Routes/alumniRoute");
 const resetpasswordRoutes = require("./Routes/resetpasswordRoutes");
-const verifyEmailRoutes = require("../server/Routes/verifyEmailRoutes");
+const verifyEmailRoutes = require("./Routes/verifyEmailRoutes");
 const User = require("./Models/userModel");
 const Department = require("./Models/departmentModel");
 const Document = require("./Models/documentModel");
