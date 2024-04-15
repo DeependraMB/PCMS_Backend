@@ -28,9 +28,7 @@ const io = new Server(server, {
 
 initializeSocket(server);
 
-router.get("/", (req, res) => {
-  res.status(200).json({ status: "success", message: "Server is running" });
-});
+
 const loginRoutes = require("../server/Routes/loginRoutes");
 const studentRoutes = require("./Routes/studentRoutes");
 const teacherRoutes = require("./Routes/teacherRoutes");
@@ -64,6 +62,11 @@ app.use(bodyParser.json());
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+
+app.get("/", (req, res) => {
+  res.status(200).json({ status: "Server is running" });
+});
 
 // Routers
 app.use("/student/register", studentRoutes);
