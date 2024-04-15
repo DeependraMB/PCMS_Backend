@@ -1,7 +1,7 @@
 // routes/exams.js
 const express = require("express");
 const router = express.Router();
-const Exam = require("../models/examModel");
+const Exam = require("../Models/examModel");
 const Question = require("../models/questionModel");
 
 // Create Exam
